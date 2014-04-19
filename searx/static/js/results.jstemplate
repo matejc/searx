@@ -1,0 +1,17 @@
+{{#each results}}
+
+<div class="result {{ this.class }}">
+
+  {{#if this.favicon}}
+    <img width="14" height="14" class="favicon" src="static/img/icon_{{this.favicon}}.ico" />
+  {{/if}}
+
+  <div>
+    <h3 class="result_title"><a href="{{ this.url }}">{{{this.title}}}</a></h3>
+    {{#if this.publishedDate}}<p class="published_date">{{this.publishedDate}}</p>{{/if}}
+    <p class="content">{{#if this.content}}{{{this.content}}}<br />{{/if}}</p>
+    <p class="url">{{this.pretty_url}}</p>
+  </div>
+</div>
+
+{{/each}}
