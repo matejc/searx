@@ -8,4 +8,9 @@
     <div id="searxtitle" class="title"><h1>searx</h1></div>
     {% include 'search.html' %}
 </div>
+<div id="searchresults">
+    {% for result in results %}
+        {% include 'result_templates/default.html' %}
+    {% endfor %}
+</div>
 {% endblock %}

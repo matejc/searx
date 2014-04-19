@@ -13,16 +13,11 @@
     {% block head %}
     <link title="searx" type="application/opensearchdescription+xml" rel="search" href="{{ url_for('opensearch') }}"/>
     {% endblock %}
-    <script type="text/javascript">
-        searx = {};
-        searx.autocompleter = {% if autocomplete %}true{% else %}false{% endif %};
-    </script>
 </head>
 <body>
 <div id="container">
 {% block content %}
 {% endblock %}
-<div id="searchresults"></div>
 </div>
 </body>
     <script src="{{ url_for('static', filename='js/handlebars-v1.3.0.js') }}" ></script>
